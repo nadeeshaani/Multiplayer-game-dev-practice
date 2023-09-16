@@ -49,10 +49,19 @@ public class Server : MonoBehaviourPunCallbacks
 
     #region LOBBY CALLBACKS
 
-  
+
     #endregion
 
-   internal void CreateRoom(string roomID)
+    #region INSTANTIATE
+    internal void InstantiateGameObject(string goName, Vector3 pos, Quaternion rotation)
+    {
+        PhotonNetwork.Instantiate(goName, pos, rotation);
+    }
+
+
+    #endregion
+
+    internal void CreateRoom(string roomID)
     {
         PhotonNetwork.CreateRoom(roomID);
     }

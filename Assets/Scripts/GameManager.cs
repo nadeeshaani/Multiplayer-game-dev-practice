@@ -13,8 +13,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_InputField createRoomField;
     [SerializeField] private TMP_InputField joinRoomField;
 
+    [Header("PLAYER")]
+    [SerializeField] private SpawnPlayer spawnPlayer;
 
-    [SerializeField]
+
+    //[SerializeField]
 
     private void Awake()
     {
@@ -46,7 +49,7 @@ public class GameManager : MonoBehaviour
     {
         lobby.SetActive(false);
 
-        //spawnMyPlayer.Spawn();
+        spawnPlayer.Spawn();
     }
 
 
